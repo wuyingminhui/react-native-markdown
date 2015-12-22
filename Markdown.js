@@ -1,8 +1,10 @@
 var React = require('react-native');
 var {
-  View
+  View,
+  Dimensions
 } = React;
 var _ = require('lodash');
+var {width, height} = Dimensions.get('window')
 var SimpleMarkdown = require('simple-markdown');
 
 var styles = {
@@ -44,8 +46,8 @@ var styles = {
     height: 1
   },
   image: {
-    height: 50, // TODO: React Native needs to support auto image size
-    width: 50 // TODO: React Native needs to support auto image size
+    height: width - 40, // TODO: React Native needs to support auto image size
+    width: width - 40 // TODO: React Native needs to support auto image size
   },
   inlineCode: {
     backgroundColor: '#eeeeee',
